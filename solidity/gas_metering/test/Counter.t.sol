@@ -21,4 +21,11 @@ contract CounterTest is Test {
         counter.setNumber(x);
         assertEq(counter.number(), x);
     }
+
+    function test_Pow() public {
+        uint256 fp = 340282366367469178095360967382638002176;
+        uint256 n = 11043821;
+        uint256 result = counter.pow(fp, n);
+        console.log("result: %d", result);
+    }
 }
